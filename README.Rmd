@@ -1,0 +1,34 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Función `flatten_ssa_pdf()`
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Función para cargar los datos de casos positivos de COVID19 desde los comunicados técnicos diarios de la Secretaría de Salud (Gobierno de México). 
+
+Utiliza `pdftools` para leer todo el contenido de los reportes y expresiones regulares para alinear las líneas de texto previo a leerlas como archivos de anchos fijos. 
+
+El único argument que toma es la ruta local o web del archivo PDF. Genera un 'tibble' con los datos tabulares de todas las páginas del archivo. 
+
+Probada con las versiones de los PDF archivadas en el repostorio de Katia Guzmán Martínez (https://github.com/guzmart/covid19_mex) de marzo 19 a marzo 22 de 2020.
+
+``` {r}
+source("flatten_ssa_pdf.R")
+# url del comunicado técnico
+url_pdf_ssa_2403 <- "https://www.gob.mx/cms/uploads/attachment/file/543205/Tabla_casos_positivos_COVID-19_resultado_InDRE_2020.03.24.pdf"
+# importar datos
+flatten_ssa_pdf(url_pdf_ssa_2403)
+```
+

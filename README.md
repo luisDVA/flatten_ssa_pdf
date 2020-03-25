@@ -15,13 +15,16 @@ Utiliza `pdftools` para leer todo el contenido de los reportes y
 expresiones regulares para alinear las líneas de texto previo a leerlas
 como archivos de anchos fijos.
 
-El único argument que toma es la ruta local o web del archivo PDF.
+El único argumento que toma es la ruta local o web del archivo PDF.
 Genera un ‘tibble’ con los datos tabulares de todas las páginas del
 archivo.
 
 Probada con las versiones de los PDF archivadas en el repostorio de
 Katia Guzmán Martínez (<https://github.com/guzmart/covid19_mex>) de
-marzo 19 a marzo 22 de 2020.
+marzo 19 a marzo 22 de 2020. Falta cotejar estos resultados con las
+transcripciones manuales y con las producidas por I♥️PDF.
+
+Ejemplo de uso:
 
 ``` r
 source("flatten_ssa_pdf.R")
